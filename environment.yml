@@ -1,7 +1,7 @@
 name: counterpart
 dependencies:
   - python
-  - numpy
+  - numpy=1.23.1
   - pandas
   - seaborn
   - scikit-learn

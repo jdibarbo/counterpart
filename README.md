@@ -17,9 +17,14 @@ I assume:
 # Data cleaning
 Some light data cleaning was performed to remove some duplicate companies. 
 
+# Metrics
+- *Accuracy*: overall correctness of predictions 
+- *Recall*: evaluates the proportion of actual positive instances correctly identified by the model  
+- *Precision*: measures the proportion of correctly predicted positive instances
+
 # Conclusions
-In the churn model, the main metric we consider is *recall*, as this metric tells us how many of the clients we're identifying will churn. <br>
-This feature can also be used for the multi-class model. <br>
+The main metric we consider in both models is *recall*, as we're most interested in identifying all those that positive. <br>
+This is particularly important in the churn model, where it's not as important to have false positives but to try to capture as many of the positive class as possible to prevent churn. <br>
 
 The RF results are exactly the same as the dummy model in both cases. This means: 
 
@@ -28,7 +33,7 @@ The RF results are exactly the same as the dummy model in both cases. This means
 
 Some things that could be tried to improve the results: <br>
 1) for each website, it would be necessary to have more information about the company (activity, number of years it's been active, if there's information about the number of employees and its variation over time, the company's history in counterpart, etc).
-2) Data on those companies whose revenue is "Undefined" would also help, as currently almost 25% of companies fall into this category.
+2) Data on those companies whose revenue is "Undefined" would also help, as currently, almost 25% of companies fall into this category.
 3) reduce dimensionality in cities, as it can't be used as is. There are too many cities for this to be used as a feature. It would be useful if it could be at a higher level, maybe jurisdiction or even state. <br>
 4) If the models are still underfitting with an RF classifier with the new features, it could benefit to try a different algorithm:
     - for the churn model it could be an XGBoost model

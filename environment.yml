@@ -1,13 +1,10 @@
 name: counterpart
 dependencies:
-  - python=3.8
-  - numpy=1.21
+  - python
+  - numpy
   - pandas
   - seaborn
   - scikit-learn
   - shap
   - lightgbm
-  - pip: 
-    - easydev
-    - fitter
-    
+  - xgboost

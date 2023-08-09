@@ -6,8 +6,8 @@ To run the notebook included in this repository, you have to create an environme
 The assignment for the challenge was to fill in the missing data in the test set using the train set. 
 
 To do this, I train two classification models:
-- A binary classification model to estimate the *Value* feature -which I assume could be the target for a churn model, though 10% is a high percentage in terms of churn-
-- A multi-class classification model to estimate the *Status* feature
+- A binary classification model to estimate the *Value* feature -which I understand would be the target for a churn model-
+- A multi-class classification model to estimate the *Status* feature, which I assume corresponds to the company's status: Non profit, private or publicly traded
 
 I assume:  
 - each website corresponds to a company
@@ -32,7 +32,9 @@ The RF results are exactly the same as the dummy model in both cases. This means
 - the features are not giving enough explanatory value to the model, i.e. the model is underfitting the data. 
 
 Some things that could be tried to improve the results: <br>
-1) for each website, it would be necessary to have more information about the company (activity, number of years it's been active, if there's information about the number of employees and its variation over time, the company's history in counterpart, etc).
+1) for each model, it would be necessary to have more information:
+     - for the churn model: about the company such as activity, number of years it's a client, if there's information about the number of employees and its variation over time, the company's history in counterpart, etc.
+     - for the multi-class model: also information about the company such as the sector it's in, investment rounds maybe? and information related to that. 
 2) Data on those companies whose revenue is "Undefined" would also help, as currently, almost 25% of companies fall into this category.
 3) reduce dimensionality in cities, as it can't be used as is. There are too many cities for this to be used as a feature. It would be useful if it could be at a higher level, maybe jurisdiction or even state. <br>
 4) If the models are still underfitting with an RF classifier with the new features, it could benefit to try a different algorithm:

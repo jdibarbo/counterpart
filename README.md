@@ -6,7 +6,7 @@ To run the notebook included in this repository, you have to create an environme
 The assignment for the challenge was to fill in the missing data in the test set using the train set. 
 
 To do this, I train two classification models:
-- A binary classification model to estimate the *Value* feature -which I understand would be the target for a churn model-
+- A binary classification model to estimate the *Value* feature -which I assume could be the target for a churn model, though 10% is a high percentage in terms of churn-
 - A multi-class classification model to estimate the *Status* feature
 
 I assume:  

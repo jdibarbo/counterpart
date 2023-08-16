@@ -18,9 +18,9 @@ I assume:
 Some light data cleaning was performed to remove some duplicate companies. 
 
 # Metrics
-- *Accuracy*: overall correctness of predictions 
-- *Recall*: evaluates the proportion of actual positive instances correctly identified by the model  
-- *Precision*: measures the proportion of correctly predicted positive instances
+- *Accuracy*: overall correctness of predictions (how many instances were predicted correctly out of all instances)
+- *Recall*: evaluates the proportion of actual positive instances correctly identified by the model (out of all positive instances, how many did the model predict as positive?) 
+- *Precision*: measures the proportion of correctly predicted positive instances (out of all instances predicted as positive, how many were actually positive?)
 
 # Conclusions
 The main metric we consider in both models is *recall*, as we're most interested in identifying all those that positive. <br>
